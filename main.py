@@ -9,7 +9,7 @@ root.resizable(width=False, height=False)
 root.configure(bg="blue", )
 
 font = "Arial"
-print("hello")
+print("helloasdf")
 
 lebal = Listbox(root, height=25, width=50, bg="blue", fg="white", bd=5, selectbackground="red")
 lebal.grid(row=5, column=2, columnspan=3, pady=10)
