@@ -3,11 +3,13 @@ from tkinter import *
 
 root = Tk()
 root.title("MI6 Encryptor")
+root.iconbitmap(r"MI6.ico")
 root.geometry("600x700")
-root.configure(bg="blue")
+root.resizable(width=False, height=False)
+root.configure(bg="blue", )
 
 font = "Arial"
-print("hello")
+print("helloasdf")
 
 lebal = Listbox(root, height=25, width=50, bg="blue", fg="white", bd=5, selectbackground="red")
 lebal.grid(row=5, column=2, columnspan=3, pady=10)
@@ -54,18 +56,18 @@ def Decrypt(Encrypted_Meassage = "", Shift_Decrypt = int):
                 decrypt_message += char
             else: 
                 num = (Sipher_Array_Lower_Case.index(char) - Shift_Decrypt) % 62 # E_{n}(x)= ( x + n ) mod 26 (26 is the amount of characters you have in the dictionary, dont change it) I hate math, 
-                decrypt_message += Sipher_Array_Lower_Case[num]                  #took me a long time to realize this equation from wikipedia, fuck u all https://en.wikipedia.org/wiki/Caesar_cipher, joking im just mad that it took me all this time to realize it, im dumb lmao
+                decrypt_message += Sipher_Array_Lower_Case[num]                  #took me a long time to realize this equation from wikipedia, https://en.wikipedia.org/wiki/Caesar_cipher
     
     Show_message(str(decrypt_message))
     decrypt_message = ""
     
 # UI
-main_lebel = Label(root, text="MI6 GPE - Version 3.32a", background="Blue", foreground="Yellow", font=("Times New Roman Bold", 25))
+main_lebel = Label(root, text="MI6 GPE - Version 3.32a", background="Blue", foreground="Yellow", font=("Arial Bold", 25))
 
 shift_lebel = Label(root, text="Shift: ", background="blue", foreground="white", font=("Arial Bold", 15))
 message_lebel = Label(root, text="Message: ", background="blue", foreground="white", font=("Arial Bold", 15))
 
-encrypt_button = Button(root, text="Enter Your Message", command= lambda: Encrypt(message_entry.get(), int(shift_entry.get())), background="blue", foreground="blue", font=("Arial Bold", 20))
+encrypt_button = Button(root, text="Enter Your Message", command= lambda: Encrypt(message_entry.get(), int(shift_entry.get())), background="blue", foreground="white", font=("Arial Bold", 20), borderwidth=2.5)
 
 shift_entry = Entry(root, width=50, background="blue", foreground="white", font=(font))
 message_entry = Entry(root, width=50, background="blue", foreground="white", font=(font))
