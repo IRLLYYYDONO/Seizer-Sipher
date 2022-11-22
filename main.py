@@ -67,7 +67,7 @@ main_lebel = Label(root, text="MI6 GPE - Version 3.32a", background="Blue", fore
 shift_lebel = Label(root, text="Shift: ", background="blue", foreground="white", font=("Arial Bold", 15))
 message_lebel = Label(root, text="Message: ", background="blue", foreground="white", font=("Arial Bold", 15))
 
-encrypt_button = Button(root, text="Enter Your Message", command= lambda: Encrypt(message_entry.get(), int(shift_entry.get())), background="blue", foreground="white", font=("Arial Bold", 20), borderwidth=2.5)
+encrypt_button = Button(root, text="Enter Your Message", command= lambda: Encrypt(message_entry.get(), int(shift_entry.get())), background="blue", foreground="blue", font=("Arial Bold", 20), borderwidth=2.5)
 
 shift_entry = Entry(root, width=50, background="blue", foreground="white", font=(font))
 message_entry = Entry(root, width=50, background="blue", foreground="white", font=(font))
