@@ -1,18 +1,15 @@
-# Veriables
+#Verialbes 
 from tkinter import *
 
 root = Tk()
 root.title("MI6 Encryptor")
 root.iconbitmap(r"MI6.ico")
-root.geometry("600x700")
+root.geometry("700x700")
 root.resizable(width=False, height=False)
-root.configure(bg="blue", )
-
-font = "Arial"
-print("helloasdf")
+root.configure(bg="blue")
 
 lebal = Listbox(root, height=25, width=50, bg="blue", fg="white", bd=5, selectbackground="red")
-lebal.grid(row=5, column=2, columnspan=3, pady=10)
+lebal.grid(row=5, column=2, pady=10)
 
 Sipher_Array_Lower_Case = [
     'a','b','c','d','e','f','g','h','i','j',
@@ -62,20 +59,20 @@ def Decrypt(Encrypted_Meassage = "", Shift_Decrypt = int):
     decrypt_message = ""
     
 # UI
-main_lebel = Label(root, text="MI6 GPE - Version 3.32a", background="Blue", foreground="Yellow", font=("Arial Bold", 25))
+main_lebel = Label(root, text="MI6 GPE - Version 3.32a", background="Blue", foreground="Yellow", font=("Perfect Dos Vga 437", 25))
 
-shift_lebel = Label(root, text="Shift: ", background="blue", foreground="white", font=("Arial Bold", 15))
-message_lebel = Label(root, text="Message: ", background="blue", foreground="white", font=("Arial Bold", 15))
+shift_lebel = Label(root, text="Shift: ", background="blue", foreground="white", font=("Perfect Dos Vga 437", 20))
+message_lebel = Label(root, text="Message: ", background="blue", foreground="white", font=("Perfect Dos Vga 437", 20))
 
-encrypt_button = Button(root, text="Enter Your Message", command= lambda: Encrypt(message_entry.get(), int(shift_entry.get())), background="blue", foreground="blue", font=("Arial Bold", 20), borderwidth=2.5)
+encrypt_button = Button(root, text="Enter Your Message", command= lambda: Encrypt(message_entry.get(), int(shift_entry.get())), background="blue", foreground="blue", font=("Perfect Dos Vga 437", 20), borderwidth=2.5)
 
-shift_entry = Entry(root, width=50, background="blue", foreground="white", font=(font))
-message_entry = Entry(root, width=50, background="blue", foreground="white", font=(font))
+shift_entry = Entry(root, width=50, background="blue", foreground="white", font=("Perfect Dos Vga 437", 10))
+message_entry = Entry(root, width=50, background="blue", foreground="white", font=("Perfect Dos Vga 437", 10))
 
 main_lebel.grid(row=1, column=2, pady=10, padx=10)
 
 message_lebel.grid(row=2, column=1, pady=10)
-shift_lebel.grid(row=3, column=1)
+shift_lebel.grid(row=3, column=1, pady=10)
 
 message_entry.grid(row=2, column=2)
 shift_entry.grid(row=3, column=2)
