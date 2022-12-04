@@ -3,13 +3,13 @@ from tkinter import *
 
 root = Tk()
 root.title("MI6 Encryptor")
-root.iconbitmap(r"MI6.ico")
+#root.iconbitmap(r"MI6.ico")
 root.geometry("600x700")
 root.resizable(width=False, height=False)
 root.configure(bg="blue", )
 
 font = "Arial"
-print("helloasdf")
+
 
 lebal = Listbox(root, height=25, width=50, bg="blue", fg="white", bd=5, selectbackground="red")
 lebal.grid(row=5, column=2, columnspan=3, pady=10)
